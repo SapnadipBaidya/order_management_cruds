@@ -4,5 +4,5 @@ import java.util.List;
 import java.util.Map;
 
 public interface GenericQueryService {
-	public List<?> executeHqlQuery(String hql, Map<String, Object> parameters);
+	public List<Map<String,String>> executeHqlQuery(String hql, Map<String, Object> parameters);
 }

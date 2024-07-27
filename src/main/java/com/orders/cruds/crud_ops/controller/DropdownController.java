@@ -1,6 +1,7 @@
 package com.orders.cruds.crud_ops.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +21,7 @@ public class DropdownController {
 	}
 	
 	@GetMapping("/findHQLbyKEY/{storeKey}")
-	public List<?> findHQLbyKEY(@PathVariable String storeKey){
+	public List<Map<String,String>> findHQLbyKEY(@PathVariable String storeKey){
 		System.out.println(storeKey);
 		return dropdownStoreService.findHQLbyKEY(storeKey);
 	}

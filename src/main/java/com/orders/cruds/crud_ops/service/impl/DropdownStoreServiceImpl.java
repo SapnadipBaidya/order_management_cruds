@@ -1,6 +1,7 @@
 package com.orders.cruds.crud_ops.service.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +20,7 @@ public class DropdownStoreServiceImpl implements DropdownStoreService{
 	@Autowired
 	GenericQueryService genericQueryService;
 	@Override
-	public List<?> findHQLbyKEY(String storeKey){
+	public List<Map<String,String>> findHQLbyKEY(String storeKey){
 		try {
 			logger.debug("DropdownStoreService findHQLbyKEY start "+storeKey);
 			String HQLquery = dropdownStoreRepository.findHQLbyKEY(storeKey);
