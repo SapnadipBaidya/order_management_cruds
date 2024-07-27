@@ -48,8 +48,8 @@ public class GenericQueryServiceImpl implements GenericQueryService {
                 String valueDisplay = (String) row[1];  // Assuming the second column is valueDisplay
 
                 Map<String, String> resultMap = new HashMap<>();
-                resultMap.put("valueKey", valueKey);
-                resultMap.put("valueDisplay", valueDisplay);
+                resultMap.put("title", valueKey);
+                resultMap.put("label", valueDisplay);
 
                 resultListMap.add(resultMap);
 
