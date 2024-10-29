@@ -7,9 +7,9 @@ import java.util.Date;
 @Table(name = "field_type")
 public class FieldType {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "field_type_id")
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "field_type_id")
     private Integer fieldTypeId;
 
     @Column(name = "field_type_name")

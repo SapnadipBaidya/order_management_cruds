@@ -14,4 +14,6 @@ public interface LuFieldService {
     public void saveFields(List<LuField> luFields);
     List<LuField> findUpdatedAfter(Date updateDate);
 	public String getHealth();
+	public List<LuField> findByDataTypeAndAccountId(Integer fkDatatypeId, Integer fkAccountId);
+    public void setFieldType(LuField luField, String fieldTypeName);
 }

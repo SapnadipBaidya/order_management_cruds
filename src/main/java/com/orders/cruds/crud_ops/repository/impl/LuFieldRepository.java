@@ -7,6 +7,9 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 import org.springframework.data.repository.query.Param;
+
+import com.orders.cruds.crud_ops.model.DataType;
+import com.orders.cruds.crud_ops.model.LuAccount;
 import com.orders.cruds.crud_ops.model.LuField;
 
 @org.springframework.stereotype.Repository
@@ -22,5 +25,9 @@ public interface LuFieldRepository extends Repository<LuField, Integer> {
 
 	@Query("SELECT l FROM LuField l WHERE l.updateDate > :date")
     List<LuField> findUpdatedAfter(@Param("date") Date date);
+	
+	
+	@Query("SELECT l FROM LuField l WHERE l.fkDatatypeId = :fkDatatypeId and l.fkAccountId = :fkAccountId")
+    List<LuField> findByDataTypeAndAccountId(@Param("fkDatatypeId") DataType fkDatatypeId,LuAccount fkAccountId);
 	
 }
